@@ -6,22 +6,65 @@
     
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="client/main.css">
   </head>
   <body>
-    <!-- sample angular code -->
-    <div class="container">
-      <div ng-controller="myController">
-        <p>{{ greeting }}</p>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="pink">gDating</span></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="pink">Link</span></a></li>
+            <li><a href="#"><span class="pink">Link</span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="banner">
+        </div>
       </div>
     </div>
+
+
+    <!-- sample angular code -->
+    <div class="container">
+      <div ng-controller="IndexController">
+        <p class="pink">{{ greeting }}</p>
+      </div>
+    </div>
+
+    <footer class="row navbar-fixed-bottom">
+      <div class="container-fluid">
+        <div class="col-md-12">
+          <h5>&copy; gDating</h5>
+        </div>
+    </footer>
     
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular-route.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular-sanitize.js"></script>
+    <script type="text/javascript" src="/client/js/main.js"></script>
+    <script type="text/javascript" src="client/js/app.js"></script>
+    <script type="text/javascript" src="client/js/controllers/IndexController.js"></script>
   </body>
 </html>
