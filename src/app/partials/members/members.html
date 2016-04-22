@@ -8,7 +8,10 @@
          ng-click="me.findPopular(); sort = '_matches.length'"
          >Popular</a>
       <a class="btn btn-primary" 
-         ng-click="me.getAll(); sort = '_matches.length'"
+         ng-click="me.findMatches();"
+         >Matches</a>
+      <a class="btn btn-primary" 
+         ng-click="me.getAll();"
          >Show All</a>
 
 <div ng-repeat="member in me.members track by $index | orderBy: sort">

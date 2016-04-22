@@ -20,6 +20,21 @@ function MembersController (membersService, $rootScope) {
     console.log(me.members);
   };
 
+  me.findMatches = function() {
+    var testId = '5719234249f05f11000fdbff';
+    var matches = [];
+
+    me.members.forEach(function(el) {
+      el._matches.forEach(function(element) {
+        if(element === testId){
+          matches.push(el);
+        }
+      })
+    });
+    console.log(matches);
+    me.members = matches;
+  };
+
   me.getAll = function() {
     membersService.getAll()
       .then(function(results){
