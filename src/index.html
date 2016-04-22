@@ -2,7 +2,7 @@
 <html lang="en" ng-app='datingApp'>
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Dating App</title>
     
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
@@ -29,10 +29,22 @@
   <!-- Angular and Route -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular-route.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.10/angular-sanitize.js"></script>
 
   <!-- Require filters app and router -->
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/router.js"></script>
+
+  <!-- login and register -->
+    <script type="text/javascript" src="app/partials/login/login-controller.js"></script>
+    <script type="text/javascript" src="app/partials/login/login-directive.js"></script>
+    <script type="text/javascript" src="app/partials/register/register-controller.js"></script>
+    <script type="text/javascript" src="app/partials/register/register-directive.js"></script>
+
+  <!-- auth -->
+    <script type="text/javascript" src="app/partials/auth/auth-service.js"></script>
+    <script type="text/javascript" src="app/partials/auth/auth-interceptor-service.js"></script>     
+
 
   <!-- filters -->
     <script type="text/javascript" src="app/filters/gender.js"></script>
