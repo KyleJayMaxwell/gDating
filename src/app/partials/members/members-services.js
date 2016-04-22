@@ -8,7 +8,7 @@ function membersService ($http) {
   return {
     
     getAll: function(){
-      return $http.get('https://galvanize-student-apis.herokuapp.com/gdating/members');
+      return $http.get('https://galvanize-student-apis.herokuapp.com/gdating/members?limit=100');
     }
 
   };
