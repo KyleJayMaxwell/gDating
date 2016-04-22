@@ -11,6 +11,7 @@ function membersAll() {
     restrict: 'E',
     templateUrl: 'app/partials/members/members.html',
     controller: 'MembersController',
+    controllerAs: 'me',
     bindToController: true  
   };
 }

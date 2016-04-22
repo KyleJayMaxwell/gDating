@@ -4,7 +4,14 @@
   </div>
 </div>
 
-<div ng-repeat="member in members track by $index">
+      <a class="btn btn-primary" 
+         ng-click="me.findPopular(); sort = '_matches.length'"
+         >Popular</a>
+      <a class="btn btn-primary" 
+         ng-click="me.getAll(); sort = '_matches.length'"
+         >Show All</a>
+
+<div ng-repeat="member in me.members track by $index | orderBy: sort">
 <div class="row">
   <div class="col-md-4 right-border center">
     <a href="/#/{{member._id}}">
