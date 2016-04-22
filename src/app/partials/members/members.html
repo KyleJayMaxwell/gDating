@@ -10,6 +10,7 @@
       <a class="btn btn-primary" 
          ng-click="me.findMatches();"
          >Matches</a>
+
       <a class="btn btn-primary" 
          ng-click="me.getAll();"
          >Show All</a>
@@ -20,6 +21,7 @@
     <a href="/#/{{member._id}}">
     <img class="circle" src="{{member.avatar}}">
     <h4>{{member.username}}</h4></a>
+    <p>{{member.gender | gender}}</p>
   </div>
 
   <div class="col-md-8">

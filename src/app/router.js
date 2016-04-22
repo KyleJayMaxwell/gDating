@@ -11,6 +11,9 @@ function config($routeProvider) {
   .when('/', {
     template: '<landing></landing>'
   })  
+  .when('/login', {
+    template: '<login></login>'
+  })
   .when('/members', {
     template: '<members-all></members-all>'
   })
