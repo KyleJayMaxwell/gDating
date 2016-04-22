@@ -1,24 +1,27 @@
 
-angular
-  .module('datingApp')
-  .controller('LoginController', LoginController);
+(function () {
 
-LoginController.$inject = ['$rootScope', '$location', 'authService'];
+  'use strict';
 
-function LoginController($rootScope, $location, authService) {
-  var me = this;
+  angular.module('datingApp')
+    .controller('loginController', loginController);
 
-  me.user = {};
-  
-  me.login = function() {
-    
-    authService.login(me.user)
-   .then(function(user) { authService.setUserInfo(user);
-                          $location.path('/members');
-                          $rootScope.currentUser = JSON.parse(authService.getUserInfo()); 
-                         })
-    .catch( function (error) { console.log(error); return error; })
-  
-  };
+  loginController.$inject = ['$rootScope', '$scope', '$location', 'authService'];
 
-}
+  function loginController($rootScope, $scope, $location, authService) {
+    $scope.user = {};
+    $scope.login = function() {
+      authService.login($scope.user)
+        .then(function(user) {
+          authService.setUserInfo(user);
+          $location.path('/');
+          $rootScope.currentUser = authService.getUserInfo();
+        })
+        .catch(function(err) {
+          // check status code, send appropriate message
+          console.log(err);
+        });
+    };
+  }
+
+})();

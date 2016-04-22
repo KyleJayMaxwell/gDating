@@ -2,14 +2,14 @@
   'use strict';
 
   angular
-  .module('datinApp')
+  .module('datingApp')
   .directive('login', login);
 
 function login() {
   return {
     restrict: 'E',
     templateUrl: 'app/partials/login/login.html',
-    controller: 'LoginCtrl',
+    controller: 'loginController',
     controllerAs: 'me',
     bindToController: true  
   };
