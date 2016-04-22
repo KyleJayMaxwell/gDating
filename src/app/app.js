@@ -1,2 +1,6 @@
 // making angular app and putting route in it.
-angular.module('datingApp', ['ngRoute']);
+
+  angular.module('datingApp', [
+    'ngRoute',
+    'ngSanitize'
+  ]);
